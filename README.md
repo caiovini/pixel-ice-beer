@@ -4,7 +4,7 @@ A small modified version of the physical arcade game ice cold beer
 
 ## Demo
 
-![alt text](https://github.com/caiovini/pixel-ice-beer/blob/master/Demo.gif)
+![alt text](https://github.com/caiovini/pixel-ice-beer/blob/main/Demo.gif)
 
 ## Instructions 
 
