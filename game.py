@@ -65,6 +65,7 @@ def main() -> None:
 
         return [body, segment_1, segment_2, segment_3]
 
+    run_space_steps = True
     seconds = score_ = 0
     game_win = game_over = done = False
     start_ticks = pg.time.get_ticks()
@@ -107,7 +108,9 @@ def main() -> None:
         static_lines = create_static_lines()
         space.add(*static_lines) # Add segments
 
-        space.step(space_step)
+        if run_space_steps:
+            space.step(space_step)
+
         screen.blit(
             ball.image, (ball.body.position.x - ball.image.get_rect().size[0] / 2,
                          ball.body.position.y - ball.image.get_rect().size[1] / 4))
@@ -154,9 +157,10 @@ def main() -> None:
                 "VICTORY !!!", 1, YELLOW)
             screen.blit(label, (SCREEN_WIDTH / 2.8, SCREEN_HEIGHT / 2.5))
 
-        if (ball.body.position.x < 0 or ball.body.position.x > SCREEN_WIDTH) or \
-                (ball.body.position.y < 0 or ball.body.position.y > SCREEN_HEIGHT):
+        if not (0 < ball.body.position.x < SCREEN_WIDTH) or \
+               not (0 < ball.body.position.y < SCREEN_HEIGHT):
                     game_over = True
+                    run_space_steps = False
 
         pg.display.flip()
         space.remove(*static_lines) # Remove segments
