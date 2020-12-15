@@ -19,7 +19,7 @@ python game.py
 ## Game
 
 Press keys up, left, right and down to move the line sustaining the ball<br/>
-depending on its angle, the ball will move right and left.<br/>
+depending on its angle, the ball will move right or left.<br/>
 
 The goal is to reach any hole with the blue border as fast as possible.<br/>
 
