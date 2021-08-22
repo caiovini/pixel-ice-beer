@@ -26,3 +26,9 @@ The goal is to reach any hole with the blue border as fast as possible.<br/>
 ## Assets
 
 All assets for this game can be found [here!](https://opengameart.org/content/ball-animation-include-vector-file)
+
+
+## Try it out 
+
+
+replit [here!](https://replit.com/@CaioVinicius18/pixel-ice-beer?v=1)
